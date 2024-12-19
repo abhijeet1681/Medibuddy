@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Meta Data-->
+    <%- include('partial/title.ejs'); %> <% if (data.NODE_ENV == 'production') {
+    %>
+    <!-- Production Stylesheets -->
+    <link rel="stylesheet" href="assets/production/css/home.min.css" />
+
+    <% }else { %>
+    <!-- Development Stylesheets -->
+    <link rel="stylesheet" href="assets/lib/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/lib/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="assets/lib/css/responsive.css" />
+    <link rel="stylesheet" href="assets/lib/css/select2.min.css" />
+    <link rel="stylesheet" href="assets/lib/css/spacing.css" />
+    <link rel="stylesheet" href="assets/lib/css/style.css" />
+    <link rel="stylesheet" href="assets/lib/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/lib/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/lib/css/bootstrap-datepicker.min.css" />
+    <link rel="stylesheet" href="assets/lib/css/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
+    <link rel="stylesheet" href="assets/css/header.css" />
+
+    <% } %>
+  </head>
+
+  <body onLoad="typeWriter()">
+    <!--Header-->
+    <%- include('partial/header1.ejs', {data: data }); %>
+
+    <!--About Start-->
+
+    <!--About End-->
+
+    <!--Choose-Area Start-->
+    <div class="choose-area pb_90">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="headline">
+              <h2>WHY CHOOSE US</h2>
+              <h3>We have some special crieteria that will help you</h3>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div
+              class="choose-item flex"
+              style="background-image: url(assets/images/cloak.JPEG)"
+            >
+              <div class="choose-icon">
+                <i class="fas fa-clock fa-3x" aria-hidden="true"></i>
+              </div>
+              <div class="choose-text">
+                <h4>QUICK RESPONSE</h4>
+                <p>
+                  Our commitment to a prompt response ensures that users
+                  experience timely and efficient healthcare services.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div
+              class="choose-item flex"
+              style="background-image: url(assets/images/satisfication.JPEG)"
+            >
+              <div class="choose-icon">
+                <i class="fa fa-thumbs-up fa-3x" aria-hidden="true"></i>
+              </div>
+              <div class="choose-text">
+                <h4>100% SATISFACTION</h4>
+                <p>
+                  We go beyond meeting expectations to provide a healthcare
+                  experience that not only addresses needs but surpasses them.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div
+              class="choose-item flex"
+              style="background-image: url(assets/images/qualityservice.JPEG)"
+            >
+              <div class="choose-icon">
+                <i class="fa fa-globe fa-3x" aria-hidden="true"></i>
+              </div>
+              <div class="choose-text">
+                <h4>QUALITY SERVICE</h4>
+                <p>
+                  Commitment to delivering quality service. From innovative
+                  solutions to seamless user experiences, every aspect is
+                  meticulously designed to uphold the highest standards.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Choose-Area End-->
+
+    <!--Feature-Area Start-->
+    <div class="feature-area feature-two bg-area pt_90 pb_90">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="headline">
+              <h2>SPECIAL FEATURES</h2>
+              <h3>We offer some awesome features that will help you</h3>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <br />
+                <i class="fas fa-hospital-alt fa-3x" aria-hidden="true"></i>
+              </div>
+              <div class="feature-text">
+                <h4>Planned Space Design</h4>
+                <p>
+                  Ensuring that every aspect of the
+                  digital environment is thoughtfully organized. 
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <br />
+                <i class="fas fa-procedures fa-3x" aria-hidden="true"></i>
+              </div>
+              <div class="feature-text">
+                <h4>Good Medical Facilities</h4>
+                <p>
+                   A comprehensive suite of healthcare services and resources available through our platform. 
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <br />
+                <i class="fas fa-ambulance fa-3x" aria-hidden="true"></i>
+              </div>
+              <div class="feature-text">
+                <h4>Best Ambulance Service</h4>
+                <p>
+                  At the heart of our application is the commitment to providing the best ambulance service. 
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <br />
+                <i class="fas fa-laptop-medical fa-3x" aria-hidden="true"></i>
+              </div>
+              <div class="feature-text">
+                <h4>Computerized Platform</h4>
+                <p>
+                   Includes automated appointment scheduling, data analytics for health insights, and efficient record-keeping.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <br />
+                <i class="fas fa-stethoscope fa-3x" aria-hidden="true"></i>
+              </div>
+              <div class="feature-text">
+                <h4>Reduced Supervision</h4>
+                <p>
+                  Our platform is designed for efficiency, minimizing the need for constant supervision.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <br />
+                <i class="fas fa-robot fa-3x" aria-hidden="true"></i>
+              </div>
+              <div class="feature-text">
+                <h4>Modern Technology</h4>
+                <p>
+                  Modern tech stack ensures scalability, dynamic user interface, keeping the platform at the forefront of digital innovation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Feature-Area End-->
+
+    <!--Services Start-->
+    <div class="services-area pt_90 pb_90">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="headline">
+              <h2>OUR SERVICES</h2>
+              <h3>We are always here to serve you some awesome services</h3>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="services-item effect-item">
+              <a href="/view3" class="image-effect">
+                <div
+                  class="services-photo"
+                  style="background-image: url(assets/images/newborn.JPEG)"
+                ></div>
+              </a>
+              <div class="services-text">
+                <h3><a href="/view3">Newborn Care</a></h3>
+                <p>
+                  we recognize the delicate nature of newborn care and the importance of providing parents with a reliable and accessible platform.
+                </p>
+                <div class="button-bn">
+                  <a href="/view3"
+                    >Read More <i class="fa fa-chevron-circle-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="services-item effect-item">
+              <a href="/view2" class="image-effect">
+                <div
+                  class="services-photo"
+                  style="background-image: url(assets/images/mothercare.JPEG)"
+                ></div>
+              </a>
+              <div class="services-text">
+                <h3><a href="/view2">Mother Care</a></h3>
+                <p>
+                  Lorem ipsum dolor sit amet, an labores explicari qui, eu
+                  nostrum copiosae argum entum has. Latine propriae quo no unum.
+                </p>
+                <div class="button-bn">
+                  <a href="/view2"
+                    >Read More <i class="fa fa-chevron-circle-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="services-item effect-item">
+              <a href="/view4" class="image-effect">
+                <div
+                  class="services-photo"
+                  style="
+                    background-image: url(assets/images/criticaltreatement.JPEG);
+                  "
+                ></div>
+              </a>
+              <div class="services-text">
+                <h3><a href="/view4">Critical Treatment</a></h3>
+                <p>
+                  In times of critical medical situations, 'HealthEase' stands as a reliable ally. 
+                </p>
+                <div class="button-bn">
+                  <a href="/view4"
+                    >Read More <i class="fa fa-chevron-circle-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="services-item effect-item">
+              <a href="/view5" class="image-effect">
+                <div
+                  class="services-photo"
+                  style="background-image: url(assets/images/lab.JPEG)"
+                ></div>
+              </a>
+              <div class="services-text">
+                <h3><a href="/view5">Modern Laboratory</a></h3>
+                <p>
+                  We recognize the importance of accurate and timely diagnostic servicesUsers can schedule diagnostic tests, view results, and consult with specialists based on laboratory findings—all within the same platform.
+                </p>
+                <div class="button-bn">
+                  <a href="/view5"
+                    >Read More <i class="fa fa-chevron-circle-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="services-item effect-item">
+              <a href="/view6" class="image-effect">
+                <div
+                  class="services-photo"
+                  style="background-image: url(assets/images/test.JPEG)"
+                ></div>
+              </a>
+              <div class="services-text">
+                <h3><a href="/view6">All Major Tests</a></h3>
+                <p>
+                  leaves no stone unturned when it comes to providing access to a wide array of diagnostic tests. From routine blood tests to advanced imaging studies, users can conveniently schedule and manage all major tests through the platform.
+                </p>
+                <div class="button-bn">
+                  <a href="/view6"
+                    >Read More <i class="fa fa-chevron-circle-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="services-item effect-item">
+              <a href="/view7" class="image-effect">
+                <div
+                  class="services-photo"
+                  style="background-image: url(assets/images/dental.JPEG)"
+                ></div>
+              </a>
+              <div class="services-text">
+                <h3><a href="/view7">Dental Care</a></h3>
+                <p>
+                  Oral health is an integral component of overall well-being, and 'HealthEase' recognizes the significance of dental care
+                </p>
+                <div class="button-bn">
+                  <a href="/view7"
+                    >Read More <i class="fa fa-chevron-circle-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Services End-->
+
+    <!-- TESTIMONIALS Start-->
+    <section class="testimonials">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div id="customers-testimonials" class="owl-carousel">
+              <!--TESTIMONIAL 1 -->
+              <div class="item">
+                <div class="shadow-effect">
+                  <img
+                    class="img-circle"
+                    src="assets/images/pat1.JPEG"
+                    alt="uesr1"
+                  />
+                  <p>
+                    Specialization: Cardiologist
+Role: Expert in diagnosing and treating heart-related conditions.
+
+                  </p>
+                </div>
+                <div class="testimonial-name">Dr. Marcus Bennett</div>
+              </div>
+              <!--TESTIMONIAL 1 END-->
+
+              <!--TESTIMONIAL 2 -->
+              <div class="item">
+                <div class="shadow-effect">
+                  <img
+                    class="img-circle"
+                    src="assets/images/pat2.JPEG"
+                    alt="user2"
+                  />
+                  <p>
+                    Specialization: Orthopedic Surgeon
+Role: Skilled in surgical procedures related to bones and musculoskeletal issues.
+                  </p>
+                </div>
+                <div class="testimonial-name">Dr. Olivia Reynolds</div>
+              </div>
+              <!--TESTIMONIAL 2 END-->
+
+              <!--TESTIMONIAL 3 -->
+              <div class="item">
+                <div class="shadow-effect">
+                  <img
+                    class="img-circle"
+                    src="assets/images/pat3.JPEG"
+                    alt="user3"
+                  />
+                  <p>
+                    Specialization: Pediatrician
+Role: Dedicated to providing healthcare for infants, children, and adolescents.
+                  </p>
+                </div>
+                <div class="testimonial-name">Dr. Maya Patel</div>
+              </div>
+              <!--TESTIMONIAL 3 END-->
+
+              <!--TESTIMONIAL 4 -->
+              <div class="item">
+                <div class="shadow-effect">
+                  <img
+                    class="img-circle"
+                    src="assets/images/doc1.JPEG"
+                    alt="user4"
+                  />
+                  <p>
+                   Specialization: Dermatologist
+Role: Expert in the diagnosis and treatment of skin conditions and disorders.
+                  </p>
+                </div>
+                <div class="testimonial-name">Dr. Emily Turner</div>
+              </div>
+              <!--TESTIMONIAL 4 END-->
+
+              <!--TESTIMONIAL 5 -->
+              <div class="item">
+                <div class="shadow-effect">
+                  <img
+                    class="img-circle"
+                    src="assets/images/doc2.JPEG"
+                    alt="user4"
+                  />
+                  <p>
+                    Specialization: Gastroenterologist
+Role: Focuses on the digestive system and gastrointestinal tract health.
+                  </p>
+                </div>
+                <div class="testimonial-name">MICHAEL TEDDY</div>
+              </div>
+              <!--TESTIMONIAL 5 END-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--TESTIMONIALS END-->
+
+    <!--Footer-->
+    <%- include('partial/footer.ejs'); %>
+
+    <script>
+      var i = 0;
+      var txt = 'WELCOME TO MEDBUDDY';
+      var speed = 60;
+      function typeWriter() {
+        if (i < txt.length) {
+          document.getElementById('typeit').innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+    </script>
+
+    <!-- JavaScript -->
+    <script defer src="assets/lib/js/jquery-3.4.1.min.js"></script>
+    <script defer src="/assets/lib/js/popper.min.js"></script>
+    <script defer src="assets/lib/js/owl.carousel.min.js"></script>
+    <script defer src="assets/lib/js/bootstrap.bundle.js"></script>
+    <script defer src="assets/lib/js/all.min.js"></script>
+    <script defer src="assets/lib/js/select2.full.min.js"></script>
+    <script defer src="assets/js/home.js"></script>
+  </body>
+</html>

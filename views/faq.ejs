@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!--Meta Data-->
+    <%- include('partial/title.ejs'); %> 
+
+    <% if (data.NODE_ENV == 'production') { %>
+      <!-- Production Stylesheets -->
+      <link rel="stylesheet" href="assets/production/css/about.min.css">
+
+    <% }else { %>
+      <!-- Development Stylesheets -->
+      <link rel="stylesheet" href="assets/lib/css/bootstrap.min.css">
+      <link rel="stylesheet" href="assets/lib/css/fontawesome.min.css">
+      <link rel="stylesheet" href="assets/lib/css/responsive.css">
+      <link rel="stylesheet" href="assets/lib/css/select2.min.css">
+      <link rel="stylesheet" href="assets/lib/css/spacing.css">
+      <link rel="stylesheet" href="assets/lib/css/style.css">
+      <link rel="stylesheet" href="assets/lib/css/owl.carousel.min.css">
+      <link rel="stylesheet" href="assets/lib/css/bootstrap-datepicker.min.css">
+      <link rel="stylesheet" href="assets/lib/css/magnific-popup.css">
+      <link rel="stylesheet" href="assets/css/header.css">
+      
+    <% } %>
+  </head>
+
+  <body onLoad="typeWriter()">
+    <!--Header-->
+    <%- include('partial/header.ejs', {data: data }); %>
+
+    <!--FAQ Start-->
+    <div class="faq-area pt_60 pb_90" style="background-image: url(/assets/images/bgmed.png);">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="faq-group headstyle mt-30">
+              <div id="accordion">
+                <div class="faq-item card">
+                  <div class="faq-header" id="heading1">
+                    <button class="faq-button " data-toggle="collapse" data-target="#collapse1" aria-expanded="true"
+                      aria-controls="collapse1"><i class="fa fa-caret-right"></i>How can I book an appointment with a doctor?
+                      </button>
+                  </div>
+
+                  <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordion">
+                    <div class="faq-body">
+                      <p>To book an appointment, navigate to the 'Book Appointment' section, choose your preferred doctor's specialization, select a suitable date, and the system will generate an appointment time based on the doctor's schedule. Follow the prompts to confirm your booking.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="faq-item card">
+                  <div class="faq-header" id="heading2">
+                    <button class="faq-button collapsed" data-toggle="collapse" data-target="#collapse2"
+                      aria-expanded="true" aria-controls="collapse2"><i class="fa fa-caret-right"></i>What services does the ambulance booking feature offer?</button>
+                  </div>
+
+                  <div id="collapse2" class="collapse " aria-labelledby="heading2" data-parent="#accordion">
+                    <div class="faq-body">
+                      <p>The ambulance booking feature allows you to quickly request ambulance services. Simply provide your address and phone number, and the system will notify nearby ambulance providers. The nearest available ambulance will respond to your request<br></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="faq-item card">
+                  <div class="faq-header" id="heading3">
+                    <button class="faq-button collapsed" data-toggle="collapse" data-target="#collapse3"
+                      aria-expanded="true" aria-controls="collapse3"><i class="fa fa-caret-right"></i>Can I view my past and upcoming appointments?
+</button>
+                  </div>
+
+                  <div id="collapse3" class="collapse " aria-labelledby="heading3" data-parent="#accordion">
+                    <div class="faq-body">
+                      <p>Yes, you can. In the 'Current Appointment Details' section, you can view your upcoming appointments, and in the 'Past Appointment Details' section, you can access information about your previous appointments and any prescriptions provided by the doctor.<br></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="faq-item card">
+                  <div class="faq-header" id="heading4">
+                    <button class="faq-button collapsed" data-toggle="collapse" data-target="#collapse4"
+                      aria-expanded="true" aria-controls="collapse4"><i class="fa fa-caret-right"></i>How do doctors manage appointments on the platform?</button>
+                  </div>
+
+                  <div id="collapse4" class="collapse " aria-labelledby="heading4" data-parent="#accordion">
+                    <div class="faq-body">
+                      <p>Doctors can view and manage their appointments in the 'View Current Appointment' and 'View Past Appointment' sections. They can accept or reject appointment requests and upload detailed prescriptions for past appointments<br></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="faq-item card">
+                  <div class="faq-header" id="heading5">
+                    <button class="faq-button collapsed" data-toggle="collapse" data-target="#collapse5"
+                      aria-expanded="true" aria-controls="collapse5"><i class="fa fa-caret-right"></i>How do I confirm an ambulance booking?</button>
+                  </div>
+
+                  <div id="collapse5" class="collapse " aria-labelledby="heading5" data-parent="#accordion">
+                    <div class="faq-body">
+                      <p>Once you've submitted a request for an ambulance, the system will notify you once an ambulance provider accepts your booking. You can then confirm the booking, and the ambulance will start its journey to your location.<br></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="faq-item card">
+                  <div class="faq-header" id="heading6">
+                    <button class="faq-button collapsed" data-toggle="collapse" data-target="#collapse6"
+                      aria-expanded="true" aria-controls="collapse6"><i class="fa fa-caret-right"></i>How can I update my personal information on the platform?
+</button>
+                  </div>
+
+                  <div id="collapse6" class="collapse " aria-labelledby="heading6" data-parent="#accordion">
+                    <div class="faq-body">
+                      <p>To update your personal information, go to the 'Update Credentials' section on the dashboard. Here, you can edit and save changes to your contact details and other relevant information<br></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!--FAQ End-->
+
+    <!--Footer-->
+    <%- include('partial/footer.ejs'); %>
+    
+    <script>
+      var i = 0;
+      var txt = 'WELCOME TO MEDBUDDY';
+      var speed = 60;
+
+      function typeWriter() {
+        if (i < txt.length) {
+          document.getElementById("typeit").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+    </script>
+
+      <!-- JavaScript -->
+    <script defer src="assets/lib/js/jquery-3.4.1.min.js"></script>
+    <script defer src="assets/lib/js/popper.min.js"></script>
+    <script defer src="assets/lib/js/bootstrap.bundle.min.js"></script>
+    <script defer src="assets/lib/js/all.min.js"></script>
+    <script defer src="assets/lib/js/select2.full.min.js"></script>
+    <script defer src="assets/js/about.js"></script>
+    
+  </body>
+</html>

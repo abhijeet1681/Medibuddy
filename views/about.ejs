@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!--Meta Data-->
+    <%- include('partial/title.ejs'); %> 
+
+    <% if (data.NODE_ENV == 'production') { %>
+      <!-- Production Stylesheets -->
+      <link rel="stylesheet" href="assets/production/css/about.min.css">
+
+    <% }else { %>
+      <!-- Development Stylesheets -->
+      <link rel="stylesheet" href="assets/lib/css/bootstrap.min.css">
+      <link rel="stylesheet" href="assets/lib/css/fontawesome.min.css">
+      <link rel="stylesheet" href="assets/lib/css/responsive.css">
+      <link rel="stylesheet" href="assets/lib/css/select2.min.css">
+      <link rel="stylesheet" href="assets/lib/css/spacing.css">
+      <link rel="stylesheet" href="assets/lib/css/style.css">
+      <link rel="stylesheet" href="assets/lib/css/owl.carousel.min.css">
+      <link rel="stylesheet" href="assets/lib/css/bootstrap-datepicker.min.css">
+      <link rel="stylesheet" href="assets/lib/css/magnific-popup.css">
+      <link rel="stylesheet" href="assets/css/header.css">
+      
+    <% } %>
+  </head>
+
+  <body onLoad="typeWriter()">
+    <!--Header-->
+    <%- include('partial/header.ejs', {data: data }); %>
+    
+
+    <!--About Start-->
+    <div class="about-page pt_60 pb_30" style="background-image: url(/assets/images/bgmed.png);">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h3>Our Vision</h3>
+            <p>
+              At 'HealthEase,' we envision a transformative future for healthcare, where the boundaries between traditional medical services and modern technology dissolve.<br></p>
+            <p>Our grand vision is to create an interconnected global healthcare ecosystem, redefining the way individuals perceive and engage with their well-being. In this future, healthcare is not just a reactive service but an integral part of everyday life. <br></p>
+            <p>We see a world where people, regardless of geographical constraints, have se
+seamless access to personalized and proactive health solutions. Our vision extends beyond the conventional healthcare model, aiming to foster a global community where every individual is empowered to lead a healthy, vibrant life.</p>
+            <br>
+            <h3>Our Mission</h3>
+            <p>The mission of 'HealthEase' is to spearhead a paradigm shift in healthcare delivery, guided by a commitment to innovation, efficiency, and inclusivity. We are on a journey to develop and sustain an avant-garde platform that intricately connects patients, doctors, and emergency services.</p>
+            <p>Our unwavering mission is to ensure that this connection is characterized by efficiency, security, and a compassionate touch. We believe in dismantling barriers to healthcare access, offering tools for proactive health management, and contributing to the overall health and vitality of society. 'HealthEase' is not just a platform; it's a mission to empower individuals, providing them with a comprehensive and interconnected healthcare solution that adapts to the evolving needs of our diverse user
+base.<br></p>
+            <p>Our platform is designed for efficiency, minimizing the need for constant supervision<br></p>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--About End-->
+
+    <!--Footer-->
+    <%- include('partial/footer.ejs'); %>
+
+    
+
+    <!-- JavaScript -->
+    <script defer src="assets/lib/js/jquery-3.4.1.min.js"></script>
+    <script defer src="/assets/lib/js/popper.min.js"></script>
+    <script defer src="assets/lib/js/bootstrap.bundle.min.js"></script>
+    <script defer src="assets/lib/js/all.min.js"></script>
+    <script defer src="assets/lib/js/select2.full.min.js"></script>
+    <script defer src="assets/js/about.js"></script>
+
+  </body>
+</html>
